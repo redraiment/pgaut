@@ -27,9 +27,9 @@ declare
   _handler_name text;
 begin
   -- fetch the name of auto_update_timestamp type columns,
-  -- then generate `new.<column-name> := now();` sql statement.
+  -- then generate `new.<column-name> := clock_timestamp();` sql statement.
   select
-    string_agg('  new.' || column_name || ' := now();', E'\n')
+    string_agg('  new.' || column_name || ' := clock_timestamp();', E'\n')
   into
     _sql
   from
