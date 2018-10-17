@@ -1,0 +1,3 @@
+comment = 'Auto Update Timestamp for PostgreSQL'
+default_version = '1.0.0'
+relocatable = false
